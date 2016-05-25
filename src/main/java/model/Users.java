@@ -11,12 +11,15 @@ public class Users {
     public static void main(String[] args) {
         get("/", (req, res) -> "This GETS all users.");
 
-        post("/new", (req, res) -> "This is a POST for creating a new user.");
+        post("/new", (req, res) -> {
+            // req.body() return info as query string
+            return "This is a POST for creating a new user." + req.body();
+        });
 
         get("/:id", (req, res) -> "This GETS a users by ID.");
 
         post("/signin", (req, res) -> "This is a POST for signing a user in.");
     }
 
-    
+
 }
