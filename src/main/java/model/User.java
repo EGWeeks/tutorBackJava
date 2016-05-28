@@ -6,7 +6,7 @@ package model;
 
 public class User {
 
-    private int userId;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
@@ -32,11 +32,11 @@ public class User {
     }
 
     public int getUserId() {
-        return userId;
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {

@@ -7,7 +7,7 @@ package model;
 public class Post {
 
     // User can post in a different location than there profile
-    private int postId;
+    private int id;
     private int userId;
     private String sport;
     private String type;
@@ -31,11 +31,11 @@ public class Post {
     }
 
     public int getPostId() {
-        return postId;
+        return id;
     }
 
-    public void setPostId(int postId) {
-        this.postId = postId;
+    public void setPostId(int id) {
+        this.id = id;
     }
 
     public int getUserId() {
@@ -117,7 +117,7 @@ public class Post {
 
         Post post = (Post) o;
 
-        if (postId != post.postId) return false;
+        if (id != post.id) return false;
         if (userId != post.userId) return false;
         if (!sport.equals(post.sport)) return false;
         if (!type.equals(post.type)) return false;
@@ -132,7 +132,7 @@ public class Post {
 
     @Override
     public int hashCode() {
-        int result = postId;
+        int result = id;
         result = 31 * result + userId;
         result = 31 * result + sport.hashCode();
         result = 31 * result + type.hashCode();
