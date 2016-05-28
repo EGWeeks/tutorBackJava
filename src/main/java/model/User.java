@@ -1,11 +1,10 @@
 package model;
 
-
 /**
- * Created by Weeks on 5/25/16.
+ * Created by Weeks on 5/27/16.
  */
 
-public class Users {
+public class User {
 
     private int userId;
     private String firstName;
@@ -19,7 +18,7 @@ public class Users {
     private String lng;
     private String img;
 
-    public Users(String firstName, String lastName, String email, String password, String bio, String location, String zip, String lat, String lng, String img) {
+    public User(String firstName, String lastName, String email, String password, String bio, String location, String zip, String lat, String lng, String img) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -125,18 +124,18 @@ public class Users {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Users users = (Users) o;
+        User user = (User) o;
 
-        if (!firstName.equals(users.firstName)) return false;
-        if (!lastName.equals(users.lastName)) return false;
-        if (!email.equals(users.email)) return false;
-        if (!password.equals(users.password)) return false;
-        if (!bio.equals(users.bio)) return false;
-        if (!location.equals(users.location)) return false;
-        if (!zip.equals(users.zip)) return false;
-        if (!lat.equals(users.lat)) return false;
-        if (!lng.equals(users.lng)) return false;
-        return img != null ? img.equals(users.img) : users.img == null;
+        if (!firstName.equals(user.firstName)) return false;
+        if (!lastName.equals(user.lastName)) return false;
+        if (!email.equals(user.email)) return false;
+        if (!password.equals(user.password)) return false;
+        if (!bio.equals(user.bio)) return false;
+        if (!location.equals(user.location)) return false;
+        if (!zip.equals(user.zip)) return false;
+        if (!lat.equals(user.lat)) return false;
+        if (!lng.equals(user.lng)) return false;
+        return img != null ? img.equals(user.img) : user.img == null;
     }
 
     @Override

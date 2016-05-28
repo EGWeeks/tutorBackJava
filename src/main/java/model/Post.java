@@ -3,7 +3,8 @@ package model;
 /**
  * Created by Weeks on 5/27/16.
  */
-public class Posts {
+
+public class Post {
 
     // User can post in a different location than there profile
     private int postId;
@@ -17,7 +18,7 @@ public class Posts {
     private String lat;
     private String lng;
 
-    public Posts(int userId, String sport, String type, String rate, String available, String desc, String location, String lat, String lng) {
+    public Post(int userId, String sport, String type, String rate, String available, String desc, String location, String lat, String lng) {
         this.userId = userId;
         this.sport = sport;
         this.type = type;
@@ -114,18 +115,18 @@ public class Posts {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Posts posts = (Posts) o;
+        Post post = (Post) o;
 
-        if (postId != posts.postId) return false;
-        if (userId != posts.userId) return false;
-        if (!sport.equals(posts.sport)) return false;
-        if (!type.equals(posts.type)) return false;
-        if (!rate.equals(posts.rate)) return false;
-        if (!available.equals(posts.available)) return false;
-        if (!desc.equals(posts.desc)) return false;
-        if (!location.equals(posts.location)) return false;
-        if (!lat.equals(posts.lat)) return false;
-        return lng.equals(posts.lng);
+        if (postId != post.postId) return false;
+        if (userId != post.userId) return false;
+        if (!sport.equals(post.sport)) return false;
+        if (!type.equals(post.type)) return false;
+        if (!rate.equals(post.rate)) return false;
+        if (!available.equals(post.available)) return false;
+        if (!desc.equals(post.desc)) return false;
+        if (!location.equals(post.location)) return false;
+        if (!lat.equals(post.lat)) return false;
+        return lng.equals(post.lng);
 
     }
 
