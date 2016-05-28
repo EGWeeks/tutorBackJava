@@ -33,7 +33,7 @@ public class Sql2oUserDao implements UserDao {
                     .executeUpdate()
                     .getKey();
 
-            user.setId(id);
+            user.setUserId(id);
 
         } catch (Sql2oException ex) {
             throw new DaoException(ex, "Problem adding User");

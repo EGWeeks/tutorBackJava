@@ -8,7 +8,7 @@ public class DaoException extends Exception {
 
     private final Exception originalException;
 
-    public DeoException(Exception originalException, String msg) {
+    public DaoException(Exception originalException, String msg) {
         super(msg);
         this.originalException = originalException;
     }
