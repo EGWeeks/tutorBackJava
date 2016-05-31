@@ -24,7 +24,7 @@ public class Sql2oUserDao implements UserDao {
     public void add(User user) throws DaoException {
 
         String sql = "INSERT INTO users(first_name, last_name, email, bio, location, zip, lat, lng, password, img) " +
-                "VALUES (:firstName, :lastName, :email, :bio, :location, :zip, :lat, :lng, :password, img)";
+                "VALUES (:firstName, :lastName, :email, :bio, :location, :zip, :lat, :lng, :password, :img)";
 
         try (Connection con = sql2o.open()) {
 
